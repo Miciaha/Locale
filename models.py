@@ -1,11 +1,8 @@
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask import Flask
 from werkzeug import generate_password_hash, check_password_hash
 
 
-app = Flask(__name__)
-
-db = SQLAlchemy(app)
+db = SQLAlchemy()
 
 class User(db.Model):
     __tablename__ = 'users'
