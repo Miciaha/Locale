@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-from models import User
+from models import *
 from forms import SignupForm
 
 app = Flask(__name__)
