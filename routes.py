@@ -1,8 +1,6 @@
 from flask import render_template, request, session, redirect, url_for
-from models import  db, User
+from models import  db, User, app
 from forms import SignupForm
-
-app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db.init_app(app)
