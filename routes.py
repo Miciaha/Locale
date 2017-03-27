@@ -1,15 +1,16 @@
-from flask import render_template, request, session, redirect, url_for
-from models import  db, User, app
+from flask import Flas,render_template, request, session, redirect, url_for
 from forms import SignupForm
 import os
+
+app = Flask(__name__)
+db = SQLAlchemy(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db.init_app(app)
 
+from models import User
+
 app.secret_key = "development-key"
-
-
-#Database creation
 
 
 @app.route("/")
