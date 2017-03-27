@@ -85,7 +85,13 @@ def home():
         if form.validate() == False:
             return render_template('home.html', form=form)
         else:
-            #handle form submission
+            #get the address
+            address = address.forms.data
+
+            #query for places around it
+
+
+            #return those articles
             pass
 
     elif request.method == 'GET':

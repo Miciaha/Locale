@@ -1,6 +1,10 @@
 from werkzeug import generate_password_hash, check_password_hash
 from routes import db
 
+import geocoder
+import urllib2
+import json
+
 class User(db.Model):
     __tablename__ = 'users'
     uid = db.Column(db.Integer, primary_key = True)
