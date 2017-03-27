@@ -3,6 +3,7 @@ from models import db, User
 from forms import SignupForm
 
 app = Flask(__name__)
+db = SQLAlchemy(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db.init_app(app)
