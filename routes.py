@@ -9,6 +9,10 @@ db.init_app(app)
 
 app.secret_key = "development-key"
 
+
+#Database creation
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
