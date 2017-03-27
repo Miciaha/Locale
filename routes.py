@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 from forms import SignupForm
+from flask.ext.sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
