@@ -45,7 +45,7 @@ def signup():
 def login():
     form = LoginForm()
 
-    if request.method == 'POST';
+    if request.method == 'POST'
         if form.validate() == False:
             return render_template("login.html", form=form)
         else:
