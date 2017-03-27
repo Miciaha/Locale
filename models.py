@@ -7,7 +7,7 @@ class User(db.Model):
     firstname = db.Column(db.String(100))
     lastname = db.Column(db.String(100))
     email = db.Column(db.String(120), unique = True)
-    pwdhash = db.Column(db.String(100))
+    pwdhash = db.Column(db.String(100)) #This guy caused issues for a litle bit. Never forget
 
     def __init__(self, firstname, lastname, email, password):
         self.firstname = firstname.title()
