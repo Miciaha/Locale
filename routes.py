@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 from forms import SignupForm
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 import os
 
-app = Flask(__name__)
-db = SQLAlchemy(app)
 
+app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 db.init_app(app)
 
 from models import User
