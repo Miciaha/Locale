@@ -44,13 +44,13 @@ a {
 .section-content {
   color: #3a3a3a;
   float: left;
-  width: 340px;
+  width: 420px;
 }
 
 .section-device {
   float: right;
   position: relative;
-  top: 65px;
+  top: -130px;
 }
 
 .section-device img {
