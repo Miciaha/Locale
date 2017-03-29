@@ -43,31 +43,31 @@ class Place(object):
     def query(self, address):
         lat, lng = self.address_to_latlng(address)
 
-            query_url = 'https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gsradius=5000&gscoord={0}%7C{1}&gslimit=20&format=json'.format(lat, lng)
-    g = urllib2.urlopen(query_url)
-    results = g.read()
-    g.close()
+        query_url = "https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gsradius=5000&gscoord={0}%7C{1}&gslimit=20&format=json".format(lat, lng)
+        g = urllib2.urlopen(query_url)
+        results = g.read()
+        g.close()
 
-    data = json.loads(results)
+        data = json.loads(results)
 
-    places = []
-    for place in data['query']['geosearch']:
-      name = place['title']
-      meters = place['dist']
-      lat = place['lat']
-      lng = place['lon']
+        places = []
+        for place in data['query']['geosearch']:
+            name = place['title']
+            meters = place['dist']
+            lat = place['lat']
+            lng = place['lon']
 
-      wiki_url = self.wiki_path(name)
-      walking_time = self.meters_to_walking_time(meters)
+          wiki_url = self.wiki_path(name)
+          walking_time = self.meters_to_walking_time(meters)
 
-      d = {
-        'name': name,
-        'url': wiki_url,
-        'time': walking_time,
-        'lat': lat,
-        'lng': lng
-      }
+          d = {
+            'name': name,
+            'url': wiki_url,
+            'time': walking_time,
+            'lat': lat,
+            'lng': lng
+          }
 
-      places.append(d)
+          places.append(d)
 
-    return places
+        return places
