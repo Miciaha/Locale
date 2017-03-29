@@ -60,14 +60,14 @@ class Place(object):
             wiki_url = self.wiki_path(name)
             walking_time = self.meters_to_walking_time(meters)
 
-          d = {
-            'name': name,
-            'url': wiki_url,
-            'time': walking_time,
-            'lat': lat,
-            'lng': lng
-          }
+            d = {
+                'name': name,
+                'url': wiki_url,
+                'time': walking_time,
+                'lat': lat,
+                'lng': lng
+             }
 
-          places.append(d)
+             places.append(d)
 
         return places
