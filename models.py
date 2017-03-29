@@ -68,6 +68,6 @@ class Place(object):
                 'lng': lng
              }
 
-             places.append(d)
+         places.append(d)
 
         return places
