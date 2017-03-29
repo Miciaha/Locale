@@ -10,7 +10,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 db.init_app(app)
 
-from models import User
+from models import User, Place
 
 app.secret_key = "development-key"
 
