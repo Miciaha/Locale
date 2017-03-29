@@ -57,8 +57,8 @@ class Place(object):
             lat = place['lat']
             lng = place['lon']
 
-          wiki_url = self.wiki_path(name)
-          walking_time = self.meters_to_walking_time(meters)
+            wiki_url = self.wiki_path(name)
+            walking_time = self.meters_to_walking_time(meters)
 
           d = {
             'name': name,
