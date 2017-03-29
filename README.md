@@ -1,8 +1,8 @@
-# Interesting Location Generator (Flask-Web-App)
+# Locale!
 A simple web application created to better understand Python and the Flask framework. This application generates points of interest based on the location that the user has entered. 
  User must be logged in to access application. 
 
-##Key Takeaways
+## Key Takeaways
 - Gained a better understanding on how to utilize the Model-View-Controller architectural pattern.
 
 - Discovered the efficiency of the flask library through imports such as `templates`, `session`, and `redirect_for`.
